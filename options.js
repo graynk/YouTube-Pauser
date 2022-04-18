@@ -46,7 +46,7 @@ function handleRGB(newColor) {
 function handleHex(newColor) {
 	// Sanitize Input:
 	newColor = newColor.toUpperCase().trim() // Make it all uppercase and remove whitespace
-	
+
 	// Check if valid and handle:
 	if (isValidHex(newColor)) {
 		localStorage["textColor"] = newColor;
@@ -61,10 +61,8 @@ function isValidHex(input) {
 	if (input.length !== 6) {
 		return false
 	}
-	if (!/^[0-9A-F]{6}$/i.test(input)) { 
-		return false
-	}
-	return true
+
+	return /^[0-9A-F]{6}$/i.test(input);
 }
 
 function isValidRGB(input) {

@@ -1,9 +1,14 @@
 {
 	"manifest_version": 2,
 	"name": "YouTube Pauser",
-	"version": "0.2.2",
+	"version": "1.0",
 	"description": "Single click the icon to play/pause all of the YouTube tabs",
 	"author": "graynk",
+	"homepage_url": "https://github.com/graynk/Youtube-Pauser",
+	"icons": {
+		"48": "icons/icon_48.png",
+		"128": "icons/icon_128.png"
+	},
 
 	"permissions": [
 		"tabs"
@@ -16,14 +21,11 @@
 			"js": ["content.js"]
 		}
 	],
-	"options_ui": {
-		"page": "settings.html",
-		"open_in_tab": true
-	},
 	"background": {
 		"scripts": ["background.js"]
 	},
 	"browser_action": {
-		"default_icon": "icon.png"
+		"default_icon": "icons/pause.png",
+		"default_title": "Pause YouTube"
 	}
 }
